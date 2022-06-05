@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Signup Suite" verbose="1">
+    <listeners>
+        <listener class-name="Base.TestListener" />
+    </listeners>
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL" value="https://automationexercise.com/" />
+
+    <test name="Login Tests">
+        <groups>
+            <run>
+                <include name = "smoke" />
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.LoginTest" >
+                <parameter name="email" value="raju@getnada.com"></parameter>
+                <parameter name="password" value="pP@01921666"></parameter>
+            </class>
+        </classes>
+    </test>
+</suite>
